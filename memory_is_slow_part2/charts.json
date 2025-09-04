@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Counting 10s - simple loop",
+    "y_label": "Throughput (GB/s)",
+    "categories": [""],
+    "series": {
+      "simple loop, empty cache": [0.61],
+      "simple loop": [3.71]
+    },
+    "highlight_series": "simple loop",
+    "outfile": "performance1.png"
+  },
+  {
+    "title": "Counting 10s - unrolled loop",
+    "y_label": "Throughput (GB/s)",
+    "categories": [""],
+    "series": {
+      "simple loop, empty cache": [0.61],
+      "simple loop": [3.71],
+      "unrolled loop": [5.51]
+    },
+    "highlight_series": "unrolled loop",
+    "outfile": "performance2.png"
+  },
+  {
+    "title": "Counting 10s - diskbased",
+    "y_label": "Throughput (GB/s)",
+    "categories": [""],
+    "series": {
+      "simple loop, empty cache": [0.61],
+      "simple loop": [3.71],
+      "unrolled loop": [5.51],
+      "diskbased": [5.81]
+    },
+    "highlight_series": "diskbased",
+    "outfile": "performance3.png"
+  },
+  {
+    "title": "Counting 10s - fully in-memory",
+    "y_label": "Throughput (GB/s)",
+    "categories": [""],
+    "series": {
+      "simple loop, empty cache": [0.61],
+      "simple loop": [3.71],
+      "unrolled loop": [5.51],
+      "diskbased": [5.81],
+      "fully in-memory (2GB)": [13.04],
+      "fully in-memory (50GB)": [7.9]
+    },
+    "highlight_series": "fully in-memory (50GB)",
+    "outfile": "performance4.png"
+  }
+
+]
