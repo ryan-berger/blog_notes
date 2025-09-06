@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
     int fd = open(filename, O_RDONLY);
     int* data = (int*)mmap(NULL, size_bytes, PROT_READ, MAP_SHARED, fd, 0);
- 
+
     long start = get_time_us();
     for (size_t i = 0; i < total_ints; ++i) {
         if (data[i] == 10) count++;
