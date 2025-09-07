@@ -21,9 +21,12 @@ int main(int argc, char *argv[]) {
     int* data = (int*)mmap(NULL, size_bytes, PROT_READ, MAP_SHARED, fd, 0);
 
     long start = get_time_us();
+
+    #pragma unroll
     for (size_t i = 0; i < total_ints; ++i) {
         if (data[i] == 10) count++;
     }
+
     long elapsed = get_time_us() - start;
 
     printf("simple loop found %ld 10s processed at %0.2f GB/s\n", count, (double)(size_bytes/1073741824)/((double)elapsed/1.0e6));

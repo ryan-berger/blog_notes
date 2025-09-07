@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
     
     __builtin_assume(total_ints % 8 == 0);
 
-    #pragma unroll
+    #pragma omp parallel for simd schedule(static) reduction(+:count) num_threads(16)
     for (size_t i = 0; i < total_ints; ++i) {
         if (data[i] == 10) count++;
     }
